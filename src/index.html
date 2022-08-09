@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en">
-
   <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -14,14 +13,11 @@
     <title>HTML Form</title>
     <link rel="stylesheet" href="./style.css">
   </head>
-
   <body>
-    <h1>HTML Form</h1>
     <script type="text/javascript" src="./main.js"></script>
     <form action="https://mate-academy-form-lesson.herokuapp.com/create-application" method="post">
-      <div class="information">
-        <span class="nameOfBlock">Personal Information</span>
-
+      <fieldset class="information">
+        <legend>Personal information</legend>
         <label class="form-field">
           <span>Surname:</span>
           <input
@@ -67,11 +63,9 @@
             required
           >
         </label>
-      </div>
-
-      <div class="information">
-        <span class="nameOfBlock">Registration</span>
-
+      </fieldset>
+      <fieldset class="information">
+        <legend>Registration</legend>
         <label class="form-field">
           E-mail:
           <input
@@ -93,11 +87,9 @@
             required
             >
         </label>
-      </div>
-
-      <div class="information">
-        <span class="nameOfBlock">An interesting fact about you!</span>
-
+      </fieldset>
+      <fieldset class="information">
+        <legend>An interesting fact about you!</legend>
         <div class="form-field">
           <span>Do you love cats?</span>
           <label>
@@ -121,7 +113,11 @@
         </label>
         <label class="form-field">
           <span>What time do you go to bed?</span>
-          <input type="time" name="timeToBed">
+          <input
+            type="time"
+            name="timeToBed"
+            step="1"
+          >
         </label>
         <label class="form-field">
           <span>What are your favorite brand of cars?</span>
@@ -136,14 +132,12 @@
           </select>
         </label>
         <label class="form-field">
-          <span>How you rate our work?</span>
+          <span>How do you rate our work?</span>
           <input type="range" value="0">
         </label>
-      </div>
-
-      <div class="information">
-        <span class="nameOfBlock">Additional info:</span>
-
+      </fieldset>
+      <fieldset class="information">
+        <legend>Additional info:</legend>
         <label class="form-field">
           <span>Comments:</span>
           <textarea name="comments"></textarea>
@@ -155,9 +149,8 @@
             <option value="n">no</option>
           </select>
         </div>
-      </div>
-      <button type="submit">submit</button>
+      </fieldset>
+      <button type="submit">Submit</button>
     </form>
   </body>
-
 </html>
