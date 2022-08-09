@@ -1,17 +1,158 @@
 <!doctype html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8">
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-    >
+    <meta name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HTML Form</title>
     <link rel="stylesheet" href="./style.css">
   </head>
+
   <body>
     <h1>HTML Form</h1>
     <script type="text/javascript" src="./main.js"></script>
+    <form action="https://mate-academy-form-lesson.herokuapp.com/create-application" method="post">
+      <div class="information">
+        <span class="nameOfBlock">Personal Information</span>
+
+        <label class="form-field">
+          <span>Surname:</span>
+          <input
+            type="text"
+            name="surname"
+            autocomplete="off"
+            required
+          >
+        </label>
+        <label class="form-field">
+          <span>Name:</span>
+          <input
+            type="text"
+            name="name"
+            autocomplete="off"
+            required
+          >
+        </label>
+        <label class="form-field">
+          <span>How old are You?</span>
+          <input
+            type="number"
+            name="age"
+            min="1"
+            max="100"
+            value="12"
+            required
+          >
+        </label>
+        <label class="form-field">
+          <span>Full date of birth:</span>
+          <input
+            type="date"
+            name="dateOfBirth"
+            required
+            >
+        </label>
+        <label class="form-field">
+          <span>I accept the term of the agreement</span>
+          <input
+            type="checkbox"
+            name="terms"
+            required
+          >
+        </label>
+      </div>
+
+      <div class="information">
+        <span class="nameOfBlock">Registration</span>
+
+        <label class="form-field">
+          E-mail:
+          <input
+            type="email"
+            name="email"
+            placeholder="email@example.com"
+            autocomplete="off"
+            required
+          >
+        </label>
+        <label class="form-field">
+          <span>Password:</span>
+          <input 
+            type="password"
+            name="password"
+            autocomplete="off"
+            minlength="5"
+            maxlength="20"
+            required
+            >
+        </label>
+      </div>
+
+      <div class="information">
+        <span class="nameOfBlock">An interesting fact about you!</span>
+
+        <div class="form-field">
+          <span>Do you love cats?</span>
+          <label>
+            <input 
+              type="radio"
+              name="loveCats"
+              value="y"
+            >Yes
+          </label>
+          <label>
+            <input
+              type="radio"
+              name="loveCats" 
+              value="n"
+            >No
+          </label>
+        </div>
+        <label class="form-field">
+          <span>What is your fafvorite color?</span>
+          <input type="color" name="color">
+        </label>
+        <label class="form-field">
+          <span>What time do you go to bed?</span>
+          <input type="time" name="timeToBed">
+        </label>
+        <label class="form-field">
+          <span>What are your favorite brand of cars?</span>
+          <select
+            name="favoriteCars"
+            required
+            multiple
+          >
+            <option value="BMW">BMW</option>
+            <option value="Audi">Audi</option>
+            <option value="Lada">Lada</option>
+          </select>
+        </label>
+        <label class="form-field">
+          <span>How you rate our work?</span>
+          <input type="range" value="0">
+        </label>
+      </div>
+
+      <div class="information">
+        <span class="nameOfBlock">Additional info:</span>
+
+        <label class="form-field">
+          <span>Comments:</span>
+          <textarea name="comments"></textarea>
+        </label>
+        <div class="form-field">
+          <span>Would you recommend us?</span>
+          <select name="recommend">
+            <option value="y">yes</option>
+            <option value="n">no</option>
+          </select>
+        </div>
+      </div>
+      <button type="submit">submit</button>
+    </form>
   </body>
+
 </html>

@@ -1,1 +1,18 @@
 /* styles go here */
+
+.information {
+  border: 1px solid black;
+  padding: 10px;
+  margin: 20px 0;
+}
+
+.form-field {
+  display: block;
+  padding-top: 10px;
+}
+
+.nameOfBlock {
+  position: absolute;
+  margin-top: -20px;
+  background-color: #fff;
+}
